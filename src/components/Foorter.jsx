@@ -31,26 +31,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-sm font-medium mb-2">Company</h2>
-            <ul className="text-zinc-400 text-sm space-y-1">
-              <li className="hover:text-white cursor-pointer" onClick={() => navigate("/about")}>
-                About Us
-              </li>
-              <li className="hover:text-white cursor-pointer" onClick={() => navigate("/contact")}>
-                Contact
-              </li>
-            </ul>
+
+
+
+          <div className="text-center text-zinc-500 text-sm py-4 border-t border-zinc-800">
+            © 2026 E-Commerce Website. All rights reserved.
           </div>
-        </div>
-      </div>
-
-
-      <div className="text-center text-zinc-500 text-sm py-4 border-t border-zinc-800">
-        © 2026 E-Commerce Website. All rights reserved.
-      </div>
-    </footer>
-  );
+        </footer>
+        );
 };
 
-export default Footer;
+        export default Footer;
