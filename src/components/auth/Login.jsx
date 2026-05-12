@@ -52,14 +52,15 @@ const Login = () => {
 
       <div className="w-full max-w-md bg-zinc-900 border border-zinc-700 rounded-3xl p-8 shadow-2xl">
 
-        {errors && (
-          <div className=" text-white">
-            {errors}
-          </div>
-        )}
 
-        <h1 className="text-4xl font-bold text-white mb-8 text-center">
+
+        <h1 className="text-4xl font-bold text-white mb-8 text-center flex flex-col">
           Login Page
+          {errors && (
+            <div className=" text-white">
+              {errors}
+            </div>
+          )}
         </h1>
 
         <div className="flex flex-col gap-5">
