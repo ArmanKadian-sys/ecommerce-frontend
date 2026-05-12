@@ -58,7 +58,7 @@ const Register = () => {
 
           {errors.length > 0 && (
             <ul className="bg-zinc-800 border border-zinc-600 rounded-2xl p-4 mb-6 flex flex-col">
-              these are erors
+
               {errors.map((error) => {
                 return (
 
