@@ -63,7 +63,7 @@ const Register = () => {
                 return (
                   <ul key={index}>
                     <li className="text-red-400 text-sm">
-                      {error}
+                      {error},
                     </li>
                   </ul>
                 );
