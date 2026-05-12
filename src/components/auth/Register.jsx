@@ -57,7 +57,8 @@ const Register = () => {
           </h1>
 
           {errors.length > 0 && (
-            <div className="bg-zinc-800 border border-zinc-600 rounded-2xl p-4 mb-6">
+            <div className="bg-zinc-800 border border-zinc-600 rounded-2xl p-4 mb-6 flex flex-col">
+              these are erors
               {errors.map((error, index) => {
                 return (
                   <ul key={index}>
