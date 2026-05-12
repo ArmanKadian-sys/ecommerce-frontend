@@ -57,7 +57,7 @@ const Login = () => {
         <h1 className="text-4xl font-bold text-white mb-8 text-center flex flex-col">
           Login Page
           {errors && (
-            <div className=" text-white">
+            <div className=" text-white text-sm">
               {errors}
             </div>
           )}
