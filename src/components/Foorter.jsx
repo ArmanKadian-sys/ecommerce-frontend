@@ -32,13 +32,15 @@ const Footer = () => {
           </div>
 
 
+        </div>
+      </div>
 
 
-          <div className="text-center text-zinc-500 text-sm py-4 border-t border-zinc-800">
-            © 2026 E-Commerce Website. All rights reserved.
-          </div>
-        </footer>
-        );
+      <div className="text-center text-zinc-500 text-sm py-4 border-t border-zinc-800">
+        © 2026 E-Commerce Website. All rights reserved.
+      </div>
+    </footer>
+  );
 };
 
-        export default Footer;
+export default Footer;
