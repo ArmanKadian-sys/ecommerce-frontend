@@ -147,9 +147,10 @@ const CheckoutPage = () => {
 
   if (isLoggedIn == false || userType == "seller") {
     return (
-      <div className="min-h-screen bg-white text-black flex items-center justify-center px-4">
+      <div className="min-h-screen bg-zinc-900 text-white flex items-center justify-center px-4">
         <h1 className="text-xl md:text-2xl font-semibold border border-black px-6 py-4 rounded-lg shadow">
           You are not yet logged in or you are a seller, You can
+          <p> </p>
           <a className="m-2" href="/" className="text-blue-500 hover:text-blue-700" onClick={() => { navigate("/") }}>
             Go to home page...
           </a>
