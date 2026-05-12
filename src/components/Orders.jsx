@@ -21,14 +21,14 @@ const Orders = () => {
   return (
     <>
       {isLoggedIn == false || userType == "seller" ? (
-        <h1 className="bg-zinc-900 text-white p-4 border border-zinc-700 rounded-xl text-center">
+        <h1 className="bg-zinc-900 text-white p-4 border border-zinc-700 text-center min-h-screen">
           You are not yet Logged In or You are a seller, You can
           <a className="ml-2 text-blue-400 hover:text-blue-300" href="/" onClick={() => { navigate("/") }}>
             Go to home..
           </a>
         </h1>
       ) : orders.length == 0 ? (
-        <h1 className="bg-zinc-900 text-zinc-400 p-4 border border-zinc-700 rounded-xl text-center">
+        <h1 className="bg-zinc-900 text-zinc-400 p-4 border border-zinc-700 text-center min-h-screen">
           You Haven't ordered anything yet!!
         </h1>
       ) : (
