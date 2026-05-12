@@ -48,24 +48,86 @@ const Register = () => {
 
   return (
     <>
-      {errors.map((error) => {
-        return (
-          <ul><li>{error}</li></ul>
-        )
-      })}
-      <input type="text" placeholder="name" ref={name} />
-      <input type="text" placeholder="email" ref={email} />
-      <input type="text" placeholder="password" ref={password} />
-      <input type="text" placeholder="confirm_password" ref={confirm_password} />
+      <div className="min-h-screen bg-black flex items-center justify-center px-6">
 
-      <select name="userType" ref={userType}>
-        <option value="customer">Customer</option>
-        <option value="seller">Seller</option>
-      </select>
+        <div className="w-full max-w-md bg-zinc-900 border border-zinc-700 rounded-3xl p-8 shadow-2xl">
 
-      <button onClick={onSubmit}>Submit</button>
+          <h1 className="text-4xl font-bold text-white text-center mb-8">
+            Register
+          </h1>
 
-      <button onClick={() => { navigate("/auth/login") }}>Login</button>
+          {errors.length > 0 && (
+            <div className="bg-zinc-800 border border-zinc-600 rounded-2xl p-4 mb-6">
+              {errors.map((error, index) => {
+                return (
+                  <ul key={index}>
+                    <li className="text-red-400 text-sm">
+                      {error}
+                    </li>
+                  </ul>
+                );
+              })}
+            </div>
+          )}
+
+          <div className="flex flex-col gap-5">
+
+            <input
+              type="text"
+              placeholder="Name"
+              ref={name}
+              className="bg-black border border-zinc-600 text-white px-5 py-4 rounded-2xl outline-none focus:border-white transition-all placeholder:text-zinc-500"
+            />
+
+            <input
+              type="text"
+              placeholder="Email"
+              ref={email}
+              className="bg-black border border-zinc-600 text-white px-5 py-4 rounded-2xl outline-none focus:border-white transition-all placeholder:text-zinc-500"
+            />
+
+            <input
+              type="password"
+              placeholder="Password"
+              ref={password}
+              className="bg-black border border-zinc-600 text-white px-5 py-4 rounded-2xl outline-none focus:border-white transition-all placeholder:text-zinc-500"
+            />
+
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              ref={confirm_password}
+              className="bg-black border border-zinc-600 text-white px-5 py-4 rounded-2xl outline-none focus:border-white transition-all placeholder:text-zinc-500"
+            />
+
+            <select
+              name="userType"
+              ref={userType}
+              className="bg-black border border-zinc-600 text-white px-5 py-4 rounded-2xl outline-none focus:border-white transition-all"
+            >
+              <option value="customer">Customer</option>
+              <option value="seller">Seller</option>
+            </select>
+
+            <button
+              onClick={onSubmit}
+              className="bg-white text-black font-semibold py-4 rounded-2xl hover:bg-zinc-300 transition-all duration-300"
+            >
+              Submit
+            </button>
+
+            <button
+              onClick={() => {
+                navigate("/auth/login");
+              }}
+              className="border border-zinc-500 text-zinc-300 py-4 rounded-2xl hover:bg-zinc-800 hover:text-white transition-all duration-300"
+            >
+              Login
+            </button>
+
+          </div>
+        </div>
+      </div>
     </>
   )
 }
