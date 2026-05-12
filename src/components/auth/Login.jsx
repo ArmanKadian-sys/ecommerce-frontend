@@ -53,7 +53,7 @@ const Login = () => {
       <div className="w-full max-w-md bg-zinc-900 border border-zinc-700 rounded-3xl p-8 shadow-2xl">
 
         {errors && (
-          <div className="bg-zinc-800 border border-zinc-600 text-white p-4 rounded-2xl mb-5">
+          <div className=" text-white">
             {errors}
           </div>
         )}
